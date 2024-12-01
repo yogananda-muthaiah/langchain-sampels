@@ -18,3 +18,26 @@ pip install openai
 
 Setting environment variables
 When using LangChain, especially when using external APIs, you need to set the appropriate environment variables. For example, to set your OpenAI API key:
+```
+api_key = os.getenv("OPENAI_API_KEY")
+```
+
+## Basic use case
+Once the installation and environment configuration are complete, you can check the operation of LangChain with a simple code like the following:
+```
+from langchain.llms import OpenAI
+
+llm = OpenAI(temperature=0.9)
+text = "What would be a good company name for a company that makes colorful socks?"
+print(llm(text))
+```
+
+
+
+This code uses a model from OpenAI to generate names for companies that manufacture colorful socks.
+
+Important points to note
+LangChain is under active development, so we recommend regularly updating to the latest version.
+Depending on the API or service you use, you may need to install or configure additional packages.
+There may be fees for using the API, so be sure to check the terms of use and pricing.
+With these steps, the basic environment for using LangChain will be ready.
